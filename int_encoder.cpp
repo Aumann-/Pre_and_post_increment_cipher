@@ -3,15 +3,16 @@
 #include <ctime>
 using namespace std;
 
-void Base(int, int);
-void Encode(int, int);
+typedef double value_type;
+void Base(int, value_type);
+void Encode(int, value_type);
 
 
 int main()
 {
 	srand(time(NULL));
 	int key = 4;
-	int shift = rand() % 100;
+	value_type shift = rand() % 100;
 	
 	//gets a key value (amount of sets to output
 	cout << "Enter a key-value: " << endl;
@@ -24,9 +25,9 @@ int main()
 	cin.ignore();
 }
 
-void Base(int key, int shift)
+void Base(int key, value_type shift)
 {
-	int i = 0;
+	value_type i = 0;
 	//encodes based on 0
 	cout << "Base Encoding" << endl;
 	i += shift;
@@ -39,9 +40,9 @@ void Base(int key, int shift)
 	cout << i-- << i++ << endl;
 }
 
-void Encode(int key, int shift)
+void Encode(int key, value_type shift)
 {
-	int i;
+	value_type i;
 	//gets a number and encodes it based on the key
 	cout << "Enter a number: ";
 	cin >> i;
