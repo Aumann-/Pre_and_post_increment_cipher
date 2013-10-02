@@ -1,0 +1,1 @@
+Simple int encoder that using pre and post increment operators, alongside a random number to enocde a number based on a key value which as as the number of sets to output.
